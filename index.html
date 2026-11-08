@@ -71,9 +71,12 @@ p{color:var(--mute);line-height:1.55;font-size:clamp(.88rem,1.3vw,1.02rem)}
   border-radius:16px;
   padding:16px 18px;
   box-shadow:0 4px 18px #0f172a0a;
+  border-top:3px solid var(--gold);
 }
-.card h3{font-size:1.05rem;margin:8px 0 4px;font-weight:700}
+.card h3{font-size:1.05rem;margin:0 0 6px;font-weight:700}
 .card p{font-size:.88rem}
+.card p.solo{font-size:clamp(.95rem,1.4vw,1.08rem);color:var(--ink);line-height:1.6}
+.card p.solo b{font-weight:800}
 
 .ic{
   width:38px;height:38px;border-radius:10px;
@@ -186,7 +189,7 @@ p{color:var(--mute);line-height:1.55;font-size:clamp(.88rem,1.3vw,1.02rem)}
 </div>
 
 <script>
-const C=(i,t,d,x='')=>`<div class="card"><div class="ic">${i}</div><h3>${t}</h3><p>${d}</p>${x}</div>`;
+const C=(t,d,x='')=>`<div class="card"><h3>${t}</h3><p>${d}</p>${x}</div>`;
 
 /* Slide 04 screenshots: save the three images next to this HTML file with these exact names */
 const IMG_HISAAB='hisaab.png';
@@ -199,45 +202,45 @@ const S=[
     `<span class="badge" style="align-self:flex-start">Pitch Deck · Zindagi Prize '26</span>
      <div class="ey">درزی کھاتہ</div>
      <h1>Darzi Khata <span class="ur" style="font-size:.5em;color:var(--gold2)">درزی کھاتہ</span></h1>
-     <h2 style="color:var(--gold2)">Digitizing Pakistan's Bespoke Craftsmanship</h2>
-     <p style="max-width:640px">A simple, Urdu-first phone application empowering local master tailors to replace paper registers with instant WhatsApp parchis, order pipelines, and credit trails.</p>
+     <h2 style="color:var(--gold2)">A digital khata for Pakistan's tailors</h2>
+     <p style="max-width:640px">A simple Urdu-first phone app that helps local master tailors replace paper registers with instant WhatsApp parchis, clear order tracking, and a money record that banks can trust.</p>
      <p style="font-size:.82rem;margin-top:6px">Presented by: <b>Zakarya Ahmad · Saadia Asghar · Umaiza Eshal</b></p>`,
     1
   ],
   [
     'The Story',
     `<div class="ey">The Human Reality · ہماری تحقیق</div>
-     <h2>Walking through the alleys of Rawalpindi & Islamabad</h2>
+     <h2>What we saw walking through the bazaars of Rawalpindi & Islamabad</h2>
      <div class="quote-box">
-       "Eid par 300 joray aate hain beta. Ek parchi ghoom jaye to gahak larta hai, aur karigar alag hisaab maangta hai. Akhir mein idhar udhaar ka pata hi nahi chalta."
-       <div style="font-weight:700;font-style:normal;margin-top:6px;font-size:.85rem;color:var(--em)">— Master Muhammad Arif, Saddar Bazaar</div>
+       "Eid par 300 joray aate hain beta. Ek parchi ghoom jaye to grahak larta hai, aur karigar alag hisaab maangta hai. Akhir me udhaar ka pata hi nahi chalta."
+       <div style="font-weight:700;font-style:normal;margin-top:6px;font-size:.85rem;color:var(--em)">Master Muhammad Arif, Saddar Bazaar</div>
      </div>
      <div class="grid">
-       ${C('✂','Tea-stained paper registers','Measurements written on torn paper slips. When a slip gets lost, loyal customers must be remeasured.')}
-       ${C('🌙','Eid festival delivery panic','Delivery dates kept purely in memory or chalk notes, causing delayed orders and angry walk-outs.')}
-       ${C('💸','Vanishing udhaar & zero bank trail','Almost all cash or forgotten balances. Tailors generate steady cashflow, but cannot prove their income to any bank.')}
+       ${C('Tea-stained paper registers','Measurements written on torn paper slips. When a slip gets lost, loyal customers must be remeasured.')}
+       ${C('Eid festival delivery panic','Delivery dates kept purely in memory or chalk notes, causing delayed orders and angry walk-outs.')}
+       ${C('Vanishing udhaar & no proof of income','Most payments are cash or forgotten balances. Tailors earn steadily, but have no record to show a bank.')}
      </div>`
   ],
   [
     'The Spark',
     `<div class="ey">The Spark · خیال کی شروعات</div>
      <h2>"What if Master Ji carried his entire workshop in his pocket?"</h2>
-     <p style="max-width:760px">We didn't design a complicated enterprise ERP. We built an offline-capable, pocket assistant in familiar Urdu that respects the craft and dignity of Pakistani master tailors.</p>
+     <p style="max-width:760px">We didn't build complicated business software. We built a simple pocket assistant in familiar Urdu that works even without internet and respects the craft and dignity of Pakistani master tailors.</p>
      <div class="grid">
-       ${C('📐','1-Tap Size Profiles','Record chest, shoulder, length, and ghair once. Re-use forever for repeat customers without remeasuring.')}
-       ${C('💬','Zero-Paper Trust via WhatsApp','Auto-send a digital parchi with stitch specs, balance due, and an instant Raast QR code to the customer.')}
-       ${C('📈','Unlocking Dignified Finance','Turn everyday ledger entries into an auditable credit score to secure working capital without collateral.')}
+       ${C('One-Tap Saved Measurements','Write down chest, shoulder, length, and ghair once. Reuse them every time a regular customer returns.')}
+       ${C('Trust Without Paper, on WhatsApp','Send customers a digital parchi on WhatsApp with stitching details, the balance due, and a QR code to pay instantly.')}
+       ${C('Respect from Banks','Turn everyday khata entries into a trust score that helps tailors get a loan for fabric or machines, without putting up property as security.')}
      </div>`
   ],
   [
     'How it Works',
-    `<div class="ey">02 · How it works · حل کا عملی استعمال</div>
+    `<div class="ey">How it works · حل کا عملی استعمال</div>
      <h2>From measurement tape to WhatsApp payment</h2>
      <div class="grid-3">
        <div class="screen-col">
          <span class="screen-num">1</span>
          <h3>Record order & measurements</h3>
-         <p>Kameez, shalwar & waistcoat fields arranged in the exact order tailors measure. Saved offline.</p>
+         <p>Kameez, shalwar & waistcoat fields appear in the same order tailors measure. Works even without internet.</p>
          <div class="screen-img-box">
            <img class="screen-img" src="${IMG_HISAAB}" alt="Hisaab: who paid, how, and what is still baqi">
          </div>
@@ -246,7 +249,7 @@ const S=[
        <div class="screen-col">
          <span class="screen-num">2</span>
          <h3>Send parchi on WhatsApp</h3>
-         <p>Shows total, advance, baqi, and account details with a direct scan-ready Zindigi or Raast QR.</p>
+         <p>Shows total, advance, baqi, and account details, with a QR code the customer can scan to pay.</p>
          <div class="screen-img-box">
            <img class="screen-img" src="${IMG_PARCHI}" alt="Parchi with an illustrative QR and account details, ready for WhatsApp">
          </div>
@@ -254,8 +257,8 @@ const S=[
 
        <div class="screen-col">
          <span class="screen-num">3</span>
-         <h3>Build a credit score from khata</h3>
-         <p>On-time deliveries, regular collection, and digital shares create a profile tailored for lenders.</p>
+         <h3>Build a trust score from the khata</h3>
+         <p>On-time deliveries, payments collected regularly, and digital receipts build a record that lenders can understand.</p>
          <div class="screen-img-box">
            <img class="screen-img" src="${IMG_CREDIT}" alt="Credit profile with the factors behind the score">
          </div>
@@ -265,45 +268,45 @@ const S=[
   [
     'Operations',
     `<div class="ey">Team & Money · ٹیم اور حساب کتاب</div>
-     <h2>Managing karigars, pipelines, and cashflow in real time</h2>
+     <h2>Managing karigars, orders, and money, all in one place</h2>
      <div class="grid">
-       ${C('👷','Multi-Karigar Piece Rate','Allocate suits to individual specialist cutters and stitchers. The app calculates their weekly per-suit wages automatically.')}
-       ${C('🗂','Live Kanban Pipeline','Track every suit visually: <i>Pending → Cutting → Stitching → Trial → Ready</i>. No misplaced garments.')}
-       ${C('📒','Cashflow & Udhaar Recovery','Separate cash on hand from uncollected balances (baqi). Send polite, automated WhatsApp reminders before festival dates.')}
-       ${C('📶','100% Offline Resilience','Local storage ensures shop owners can record orders, measurements, and tokens even when shop Wi-Fi or cellular data drops.')}
+       <div class="card"><p class="solo">Each <b>karigar gets assigned a task automatically</b>. The <i>app calculates every karigar weekly pay per suit</i>, so there are no arguments.</p></div>
+       <div class="card"><p class="solo">Each suit journey is followed through the process <b>Pending → Cutting → Stitching → Trial → Ready.</b> No more lost or forgotten garments.</p></div>
+       <div class="card"><p class="solo">Each <b>customer has their own account</b> so that their paid and pending payments are managed properly. Customers with pending payments get sent notification reminders before festive dates.</p></div>
+       <div class="card"><p class="solo"><b>Can manage offline too</b> you can record orders and measurements even when the shop Wi-Fi or mobile data is down. Everything is saved safely on the phone.</p></div>
      </div>`
   ],
   [
     'Business Model',
-    `<div class="ey">Monetization · آمدنی کا ماڈل</div>
-     <h2>A win-win business model built for adoption</h2>
+    `<div class="ey">How We Earn · آمدنی کا ماڈل</div>
+     <h2>How we make money</h2>
      <div class="grid">
-       ${C('🆓','Free Basic Tier','Record up to 30 orders/month, measurement profiles, and manual WhatsApp sharing. Zero friction to adopt.','<div class="big" style="margin-top:8px">Rs 0</div>')}
-       ${C('⭐','Darzi Pro Subscription','Unlimited orders, automated multi-karigar wage calculation, cloud backup, and multi-staff accounts.','<div class="big" style="margin-top:8px">Rs 300<span style="font-size:.45em;color:var(--mute)">/mo</span></div>')}
-       ${C('🤝','Fintech & Bank Integration','Partner commissions on micro-loan disbursals and merchant payment processing via Zindigi / Raast.','<div class="big" style="margin-top:8px">1.0% - 2.5%<span style="font-size:.45em;color:var(--mute)"> com.</span></div>')}
+       ${C('Free to Start','Up to 30 orders a month, saved measurements, and WhatsApp sharing. Tailors can try it without paying anything.','<div class="big" style="margin-top:8px">Rs 0</div>')}
+       ${C('Darzi Pro','Unlimited orders, automatic karigar pay, online backup so nothing is ever lost, and separate logins for your staff.','<div class="big" style="margin-top:8px">Rs 300<span style="font-size:.45em;color:var(--mute)"> a month</span></div>')}
+       ${C('Bank Partnerships','We earn a small share when a partner bank gives a tailor a loan, or when a customer pays through Zindigi / Raast.','<div class="big" style="margin-top:8px">1% - 2.5%<span style="font-size:.45em;color:var(--mute)"> share</span></div>')}
      </div>`
   ],
   [
     'Roadmap',
     `<div class="ey">Vision · وژن اور مستقبل</div>
-     <h2>Scaling the ecosystem step-by-step</h2>
+     <h2>Growing step by step</h2>
      <div class="grid">
-       ${C('🎙','Phase 1: Urdu Voice Entry','Hands-free voice recognition allowing tailors to speak numbers into the app while holding the measuring tape.')}
-       ${C('🏦','Phase 2: Formal Micro-Lending','Direct consent-based integration with Zindigi/banks for sewing machine loans and fabric working capital.')}
-       ${C('🧵','Phase 3: Wholesale Marketplace','Connecting verified neighborhood tailors directly with Faisalabad and Karachi textile mills at bulk trade rates.')}
+       ${C('Phase 1: Just Speak in Urdu','Tailors say the measurements out loud and the app writes them down, hands free, while holding the tape.')}
+       ${C('Phase 2: Small Loans from Banks','Tailors choose when to share their record with Zindigi and other banks, for sewing machine loans and money to buy fabric.')}
+       ${C('Phase 3: Cheaper Fabric','Connect trusted local tailors directly with Faisalabad and Karachi textile mills, so they buy fabric in bulk at better prices.')}
      </div>`
   ],
   [
     'Close',
     `<div class="ey">Impact · ہمارا عزم</div>
-     <h1 style="font-size:clamp(1.8rem,5.5vw,3.6rem)">Digitizing Pakistan’s Bespoke Craftsmanship, One Stitch at a Time.</h1>
+     <h1 style="font-size:clamp(1.8rem,5.5vw,3.6rem)">Pakistan's tailors deserve better than a torn paper register.</h1>
      <div class="grid" style="margin-top:8px">
        <div class="card"><div class="big">0 Lost</div><p>Zero lost parchis or repeated measurements</p></div>
-       <div class="card"><div class="big">100%</div><p>Accurate delivery deadlines and tracked karigar wages</p></div>
-       <div class="card"><div class="big">Financial</div><p>Direct pathway from informal cash to institutional credit</p></div>
+       <div class="card"><div class="big">100%</div><p>On-time deliveries and correct karigar pay</p></div>
+       <div class="card"><div class="big">Bank-ready</div><p>A real path from a cash-only business to bank loans</p></div>
      </div>
      <div style="margin-top:10px">
-       <a class="badge" style="color:var(--gold2);text-decoration:none;padding:10px 20px;font-size:.9rem" href="https://darzi-khata.replit.app" target="_blank" rel="noopener">Open Live Prototype ↗</a>
+       <a class="badge" style="color:var(--gold2);text-decoration:none;padding:10px 20px;font-size:.9rem" href="https://darzi-khata.replit.app" target="_blank" rel="noopener">Open the live prototype</a>
      </div>`,
     1
   ]
