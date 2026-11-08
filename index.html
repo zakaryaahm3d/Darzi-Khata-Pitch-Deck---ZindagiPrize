@@ -199,11 +199,12 @@ const IMG_CREDIT='credit-score.png';
 const S=[
   [
     'Cover',
-    `<span class="badge" style="align-self:flex-start">Pitch Deck · Zindagi Prize '26</span>
+    `<span class="badge" style="align-self:flex-start">Pitch Deck · Zindigi Prize '26</span>
      <div class="ey">درزی کھاتہ</div>
      <h1>Darzi Khata <span class="ur" style="font-size:.5em;color:var(--gold2)">درزی کھاتہ</span></h1>
      <h2 style="color:var(--gold2)">A digital khata for Pakistan's tailors</h2>
      <p style="max-width:640px">A simple Urdu-first phone app that helps local master tailors replace paper registers with instant WhatsApp parchis, clear order tracking, and a money record that banks can trust.</p>
+     <p style="max-width:640px;color:var(--gold2);font-weight:700">Made for Zindigi and JS Bank: bringing everyday workers into modern digital banking.</p>
      <p style="font-size:.82rem;margin-top:6px">Presented by: <b>Zakarya Ahmad · Saadia Asghar · Umaiza Eshal</b></p>`,
     1
   ],
@@ -212,7 +213,7 @@ const S=[
     `<div class="ey">The Human Reality · ہماری تحقیق</div>
      <h2>What we saw walking through the bazaars of Rawalpindi & Islamabad</h2>
      <div class="quote-box">
-       "Eid par 300 joray aate hain beta. Ek parchi ghoom jaye to grahak larta hai, aur karigar alag hisaab maangta hai. Akhir me udhaar ka pata hi nahi chalta."
+       "Eid par 300 joray aate hain beta. Ek parchi ghoom jaye to gahak larta hai, aur karigar alag hisaab maangta hai. Akhir mein idhar udhaar ka pata hi nahi chalta."
        <div style="font-weight:700;font-style:normal;margin-top:6px;font-size:.85rem;color:var(--em)">Master Muhammad Arif, Saddar Bazaar</div>
      </div>
      <div class="grid">
@@ -229,7 +230,7 @@ const S=[
      <div class="grid">
        ${C('One-Tap Saved Measurements','Write down chest, shoulder, length, and ghair once. Reuse them every time a regular customer returns.')}
        ${C('Trust Without Paper, on WhatsApp','Send customers a digital parchi on WhatsApp with stitching details, the balance due, and a QR code to pay instantly.')}
-       ${C('Respect from Banks','Turn everyday khata entries into a trust score that helps tailors get a loan for fabric or machines, without putting up property as security.')}
+       ${C('Respect from Banks','Turn everyday khata entries into a trust score that can help tailors get a loan from a bank like JS Bank, for fabric or machines, without putting up property as security.')}
      </div>`
   ],
   [
@@ -249,7 +250,7 @@ const S=[
        <div class="screen-col">
          <span class="screen-num">2</span>
          <h3>Send parchi on WhatsApp</h3>
-         <p>Shows total, advance, baqi, and account details, with a QR code the customer can scan to pay.</p>
+         <p>Shows total, advance, baqi, and account details, with a Zindigi / Raast QR so the customer can pay in one scan.</p>
          <div class="screen-img-box">
            <img class="screen-img" src="${IMG_PARCHI}" alt="Parchi with an illustrative QR and account details, ready for WhatsApp">
          </div>
@@ -258,7 +259,7 @@ const S=[
        <div class="screen-col">
          <span class="screen-num">3</span>
          <h3>Build a trust score from the khata</h3>
-         <p>On-time deliveries, payments collected regularly, and digital receipts build a record that lenders can understand.</p>
+         <p>On-time deliveries, payments collected regularly, and digital receipts build a record that lenders like JS Bank can understand.</p>
          <div class="screen-img-box">
            <img class="screen-img" src="${IMG_CREDIT}" alt="Credit profile with the factors behind the score">
          </div>
@@ -283,8 +284,20 @@ const S=[
      <div class="grid">
        ${C('Free to Start','Up to 30 orders a month, saved measurements, and WhatsApp sharing. Tailors can try it without paying anything.','<div class="big" style="margin-top:8px">Rs 0</div>')}
        ${C('Darzi Pro','Unlimited orders, automatic karigar pay, online backup so nothing is ever lost, and separate logins for your staff.','<div class="big" style="margin-top:8px">Rs 300<span style="font-size:.45em;color:var(--mute)"> a month</span></div>')}
-       ${C('Bank Partnerships','We earn a small share when a partner bank gives a tailor a loan, or when a customer pays through Zindigi / Raast.','<div class="big" style="margin-top:8px">1% - 2.5%<span style="font-size:.45em;color:var(--mute)"> share</span></div>')}
+       ${C('Bank Partnerships','We earn a small share when a partner bank like JS Bank gives a tailor a loan, or when a customer pays through Zindigi / Raast.','<div class="big" style="margin-top:8px">1% - 2.5%<span style="font-size:.45em;color:var(--mute)"> share</span></div>')}
      </div>`
+  ],
+  [
+    'Zindigi & JS Bank',
+    `<div class="ey">Our Partners · ہمارے شراکت دار</div>
+     <h2>A natural fit for Zindigi and JS Bank</h2>
+     <p style="max-width:760px">Darzi Khata gives both of them something they want: more people using digital banking every day, and a clearer picture of who can be trusted with a small loan.</p>
+     <div class="grid">
+       ${C('Every parchi is a Zindigi payment','Each parchi carries a Zindigi / Raast QR, so a tailor\'s daily cash starts moving through digital banking.')}
+       ${C('New customers for Zindigi','Every tailor who joins can open a Zindigi wallet, and so can their karigars and regular customers.')}
+       ${C('Smarter small loans for JS Bank','The trust score shows how a tailor really earns, so JS Bank can offer small loans to people with no bank history.')}
+     </div>`,
+    1
   ],
   [
     'Roadmap',
@@ -292,7 +305,7 @@ const S=[
      <h2>Growing step by step</h2>
      <div class="grid">
        ${C('Phase 1: Just Speak in Urdu','Tailors say the measurements out loud and the app writes them down, hands free, while holding the tape.')}
-       ${C('Phase 2: Small Loans from Banks','Tailors choose when to share their record with Zindigi and other banks, for sewing machine loans and money to buy fabric.')}
+       ${C('Phase 2: Small Loans with JS Bank','Tailors choose when to share their record with Zindigi and JS Bank, for sewing machine loans and money to buy fabric.')}
        ${C('Phase 3: Cheaper Fabric','Connect trusted local tailors directly with Faisalabad and Karachi textile mills, so they buy fabric in bulk at better prices.')}
      </div>`
   ],
@@ -300,10 +313,11 @@ const S=[
     'Close',
     `<div class="ey">Impact · ہمارا عزم</div>
      <h1 style="font-size:clamp(1.8rem,5.5vw,3.6rem)">Pakistan's tailors deserve better than a torn paper register.</h1>
+     <p style="max-width:640px">With Zindigi and JS Bank, a tailor's khata can become a real bank record.</p>
      <div class="grid" style="margin-top:8px">
-       <div class="card"><div class="big">0 Lost</div><p>Zero lost parchis or repeated measurements</p></div>
-       <div class="card"><div class="big">100%</div><p>On-time deliveries and correct karigar pay</p></div>
-       <div class="card"><div class="big">Bank-ready</div><p>A real path from a cash-only business to bank loans</p></div>
+       <div class="card"><div class="big">1 Scan</div><p>Customers pay their remaining money through the Zindigi / Raast QR on the parchi</p></div>
+       <div class="card"><div class="big">Zindigi Wallet</div><p>Karigar pay and customer payments move into a wallet, with a record of every rupee</p></div>
+       <div class="card"><div class="big">JS Bank Loans</div><p>The trust score can help JS Bank offer small loans for fabric and sewing machines</p></div>
      </div>
      <div style="margin-top:10px">
        <a class="badge" style="color:var(--gold2);text-decoration:none;padding:10px 20px;font-size:.9rem" href="https://darzi-khata.replit.app" target="_blank" rel="noopener">Open the live prototype</a>
